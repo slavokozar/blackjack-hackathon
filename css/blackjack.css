@@ -1,0 +1,198 @@
+body {
+    box-sizing: border-box;
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(#0b602e, #022212); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(#0b602e, #022212); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(#0b602e, #022212); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#0b602e, #022212); /* Standard syntax */
+
+    font-family: Verdana;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 0 10%;
+    margin: 0;
+}
+
+.btn{
+    cursor: pointer;
+}
+
+#heading{
+    width: 100%;
+    height: 10vh;
+}
+
+#wrapper{
+    width: 100%;
+    height: 90vh;
+}
+
+
+#middle{
+    width: 100%;
+    height: 26.667%;
+
+    display: flex;
+}
+
+#deck-wrapper{
+    display: flex;
+    margin: auto auto auto 0;
+    height: 100%;
+}
+
+#deck-wrapper #deck{
+    margin: auto 0;
+    position: relative;
+}
+
+#deck-wrapper .card{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#discard-wrapper{
+    display: flex;
+
+    margin: auto 0 auto auto;
+    height: 100%;
+}
+
+#discard-wrapper #discard{
+    margin: auto 0;
+    position: relative;
+}
+
+#discard-wrapper .card{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#hand, #croupier{
+    width: 100%;
+    height: 26.667%;
+
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+#hand .card,
+#croupier .card{
+    margin: 0 1em;
+}
+
+#croupier-text{
+    width: 100%;
+    height: 10%;
+}
+
+#croupier-text span{
+    font-size: 150%;
+}
+
+#toolbar{
+    width: 100%;
+    height: 10%;
+}
+
+#toolbar #toolbar-text{
+    margin: 0 50px;
+}
+
+#toolbar #toolbar-text span{
+    font-size: 150%;
+}
+
+.card, .card-empty{
+    font-size: 5pt;
+}
+
+.card-empty{
+    background-color: #fff;
+    font-family: 'Suit-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    border-radius: 0.8em;
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+    width: 16em;
+    height: 22.4em;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.card{
+    color: #000;
+    font-size: 5pt;
+    margin: 0;
+}
+
+.card.flipped{
+    background-image: url('../img/back.jpg');
+    background-size: cover;
+}
+
+.card.flipped div{
+    display: none;
+}
+
+
+.modal{
+    color: #000;
+}
+
+.modal .modal-footer{
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+}
+
+.modal .modal-footer .btn{
+    margin: auto;
+}
+
+.modal .modal-footer .btn span{
+    font-size: 150%;
+}
+
+
+#game-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+
+    display: -webkit-flex;
+    display: flex;
+    z-index: 11;
+}
+#game-overlay .wrapper{
+    margin: auto;
+}
